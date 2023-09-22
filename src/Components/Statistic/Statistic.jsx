@@ -1,7 +1,13 @@
+import Banner from '../Banner/Banner';
+import FeatureJobs from '../FeatureJobs/FeatureJobs';
+import JobCategories from '../JobCategories/JobCategories';
+
 const Statistic = () => {
 	return (
 		<div>
-			<h1>Statistic</h1>
+			<Banner></Banner>
+			<JobCategories></JobCategories>
+			<FeatureJobs></FeatureJobs>
 		</div>
 	);
 };

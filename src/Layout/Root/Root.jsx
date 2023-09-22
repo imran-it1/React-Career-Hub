@@ -4,12 +4,8 @@ import Footer from '../../Components/Footer/Footer';
 const Root = () => {
 	return (
 		<div>
-			<div className="max max-w-6xl mx-auto">
-				<Navbar></Navbar>
-				<div className=" min-h-screen">
-					<Outlet></Outlet>
-				</div>
-			</div>
+			<Navbar></Navbar>
+			<Outlet></Outlet>
 			<Footer></Footer>
 		</div>
 	);

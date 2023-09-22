@@ -3,8 +3,8 @@ import './index.css';
 import Root from './Layout/Root/Root.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Statistic from './Components/Statistic/Statistic';
+import JobDetails from './Components/JobDetails/JobDetails';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs';
-import Blog from './Components/Blog/Blog';
 
 const router = createBrowserRouter([
 	{
@@ -15,13 +15,16 @@ const router = createBrowserRouter([
 				path: '/',
 				element: <Statistic></Statistic>,
 			},
+
 			{
 				path: '/applied',
 				element: <AppliedJobs></AppliedJobs>,
 			},
+
 			{
-				path: '/blog',
-				element: <Blog></Blog>,
+				path: '/job/:id',
+				loader: () => fetch('jobs.json'),
+				element: <JobDetails></JobDetails>,
 			},
 		],
 	},

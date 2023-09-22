@@ -2,22 +2,20 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
-		<nav className="mt-3">
-			<div className="flex flex-wrap items-center justify-between mx-auto">
+		<nav className="bg-blue-50 py-3">
+			<div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between ">
 				<ul className="flex items-center">
 					<Link
 						to={'/'}
-						className="self-center text-2xl font-semibold whitespace-nowrap text-black"
+						className="text-3xl font-extrabold text-[#1A1919]"
 					>
 						CareerHub
 					</Link>
 				</ul>
-
 				<div className="flex md:order-2">
-					<ul className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200 ease-in-out">
+					<ul className="text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center mr-3 md:mr-0 hover:shadow-lg transition-all duration-200 ease-in-out">
 						<NavLink to={'/apply'}>Start Applying</NavLink>
 					</ul>
-
 					<button
 						data-collapse-toggle="navbar-sticky"
 						type="button"
@@ -47,18 +45,18 @@ const Navbar = () => {
 					className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
 					id="navbar-sticky"
 				>
-					<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
-						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-2 hover:decoration-blue-700 hover:underline-offset-4 ">
+					<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
+						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-2 hover:decoration-indigo-700 hover:underline-offset-4 ">
 							<NavLink
 								to={'/'}
 								className={({ isActive }) =>
-									isActive ? 'text-blue-700' : ''
+									isActive ? 'text-indigo-700 ' : ''
 								}
 							>
 								Statistic
 							</NavLink>
 						</li>
-						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-2 hover:decoration-blue-700 hover:underline-offset-4 ">
+						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-2 hover:decoration-indigo-700 hover:underline-offset-4 ">
 							<NavLink
 								to={'./applied'}
 								className={({ isActive }) =>
@@ -68,7 +66,7 @@ const Navbar = () => {
 								Applied Jobs
 							</NavLink>
 						</li>
-						<li className=" text-gray-700 hover:text-gray-900 hover:underline hover:decoration-2 hover:decoration-blue-700 hover:underline-offset-4transition-all duration-200 ease-i">
+						<li className=" text-gray-700 hover:text-gray-900 hover:underline hover:decoration-2 hover:decoration-indigo-700 hover:underline-offset-4 transition-all duration-200 ease-i">
 							<NavLink
 								to={'./blog'}
 								className={({ isActive }) =>
