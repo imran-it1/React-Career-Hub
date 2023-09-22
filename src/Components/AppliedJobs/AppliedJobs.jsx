@@ -1,7 +1,11 @@
 const AppliedJobs = () => {
 	return (
 		<div>
-			<h1>Applied Jobs</h1>
+			<div className="bg-blue-50 py-24 bg1">
+				<h1 className=" text-center text-3xl font-extrabold">
+					Applied Jobs
+				</h1>
+			</div>
 		</div>
 	);
 };

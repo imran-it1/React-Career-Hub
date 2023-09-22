@@ -1,6 +1,12 @@
 import { Link, NavLink, useLoaderData, useParams } from 'react-router-dom';
 import './Jobdetails.css';
 
+import { HiOutlineCurrencyDollar } from 'react-icons/hi2';
+import { SlCalender } from 'react-icons/sl';
+import { BsTelephone } from 'react-icons/bs';
+import { MdOutlineEmail } from 'react-icons/md';
+import { CiLocationOn } from 'react-icons/ci';
+
 const JobDetails = () => {
 	const jobs = useLoaderData();
 	const { id } = useParams();
@@ -64,41 +70,75 @@ const JobDetails = () => {
 					<div className=" w-full">
 						<div className=" bg-blue-50 rounded-md p-7">
 							<div>
-								<h3>Job Details</h3>
+								<h3 className=" text-[#1A1919] font-extrabold">
+									Job Details
+								</h3>
 							</div>
 							<div className="border-b my-6"></div>
 							<div className="mb-6">
-								<div>
-									<span></span>
-									<span>Salary</span>
-									<span>{salary}</span>
+								<div className="flex items-center mb-4">
+									<span className="font-bold inline-block mr-1">
+										<HiOutlineCurrencyDollar></HiOutlineCurrencyDollar>
+									</span>
+									<span className=" text-[#474747], font-extrabold">
+										Salary:
+									</span>
+									<span className=" text-[#757575], font-medium ml-1">
+										{salary}
+									</span>
 								</div>
-								<div>
-									<span></span>
-									<span>Job Title</span>
-									<span>{job_title}</span>
+								<div className="flex items-center">
+									<span className="font-bold inline-block mr-1">
+										<SlCalender></SlCalender>
+									</span>
+									<span className=" text-[#474747], font-extrabold">
+										Salary:
+									</span>
+									<span className=" text-[#757575], font-medium ml-1">
+										{job_title}
+									</span>
 								</div>
 							</div>
 
 							<div>
-								<h3>Contact Information</h3>
+								<h3 className=" text-[#1A1919] font-extrabold">
+									Contact Information
+								</h3>
 							</div>
 							<div className="border-b my-6"></div>
 
-							<div>
-								<span></span>
-								<span>Phone</span>
-								<span>{phone}</span>
+							<div className="flex items-center">
+								<span className="font-bold inline-block mr-1">
+									<BsTelephone></BsTelephone>
+								</span>
+								<span className=" text-[#474747], font-extrabold">
+									Phone:
+								</span>
+								<span className=" text-[#757575], font-medium ml-1">
+									{phone}
+								</span>
 							</div>
-							<div>
-								<span></span>
-								<span>Email</span>
-								<span>{email}</span>
+							<div className="flex items-center">
+								<span className="font-bold inline-block mr-1">
+									<MdOutlineEmail></MdOutlineEmail>
+								</span>
+								<span className=" text-[#474747], font-extrabold">
+									Email:
+								</span>
+								<span className=" text-[#757575], font-medium ml-1">
+									{email}
+								</span>
 							</div>
-							<div>
-								<span></span>
-								<span>Address</span>
-								<span>{address}</span>
+							<div className="flex items-center">
+								<span className="font-bold inline-block mr-1">
+									<CiLocationOn></CiLocationOn>
+								</span>
+								<span className=" text-[#474747], font-extrabold">
+									Address:
+								</span>
+								<span className=" text-[#757575], font-medium ml-1">
+									{address}
+								</span>
 							</div>
 						</div>
 						<div className="mt-8 flex justify-center">
