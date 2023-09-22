@@ -46,7 +46,7 @@ const Navbar = () => {
 					id="navbar-sticky"
 				>
 					<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
-						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-2 hover:decoration-indigo-700 hover:underline-offset-4 ">
+						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-4 hover:decoration-indigo-700 hover:underline-offset-4 ">
 							<NavLink
 								to={'/'}
 								className={({ isActive }) =>
@@ -56,7 +56,7 @@ const Navbar = () => {
 								Statistic
 							</NavLink>
 						</li>
-						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-2 hover:decoration-indigo-700 hover:underline-offset-4 ">
+						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-4 hover:decoration-indigo-700 hover:underline-offset-4 ">
 							<NavLink
 								to={'./applied'}
 								className={({ isActive }) =>
@@ -66,7 +66,7 @@ const Navbar = () => {
 								Applied Jobs
 							</NavLink>
 						</li>
-						<li className=" text-gray-700 hover:text-gray-900 hover:underline hover:decoration-2 hover:decoration-indigo-700 hover:underline-offset-4 transition-all duration-200 ease-i">
+						<li className=" text-gray-700 hover:text-gray-900 hover:underline hover:decoration-4 hover:decoration-indigo-700 hover:underline-offset-4 transition-all duration-200 ease-i">
 							<NavLink
 								to={'./blog'}
 								className={({ isActive }) =>
