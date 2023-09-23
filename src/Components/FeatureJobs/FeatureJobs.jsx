@@ -26,7 +26,7 @@ const FeatureJobs = () => {
 				<div className={dataLength === featureJobs.length && 'hidden'}>
 					<button
 						onClick={() => setDataLength(featureJobs.length)}
-						className="text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200 ease-in-out"
+						className="text-white  bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200 ease-in-out"
 					>
 						Show All
 					</button>

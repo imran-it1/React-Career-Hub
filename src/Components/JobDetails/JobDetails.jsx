@@ -159,7 +159,7 @@ const JobDetails = () => {
 						<div className="mt-8 flex justify-center">
 							<button
 								onClick={handleApplyJob}
-								className="text-white w-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200 ease-in-out"
+								className="text-white w-full  bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200 ease-in-out"
 							>
 								Apply Now
 							</button>
@@ -169,7 +169,7 @@ const JobDetails = () => {
 			</div>
 
 			<div className="mt-8 w-full mb-10 flex justify-center">
-				<button className="text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200 ease-in-out">
+				<button className="text-white  bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200 ease-in-out">
 					<Link to={'/'}>Go Back</Link>
 				</button>
 			</div>

@@ -13,8 +13,8 @@ const Navbar = () => {
 					</Link>
 				</ul>
 				<div className="flex md:order-2">
-					<ul className="text-white bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center mr-3 md:mr-0 hover:shadow-lg transition-all duration-200 ease-in-out">
-						<NavLink to={'/apply'}>Start Applying</NavLink>
+					<ul className="text-white  bg-indigo-600 hover:bg-indigo-500  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-3 text-center mr-3 md:mr-0 hover:shadow-lg transition-all duration-300 ease-in-out">
+						<NavLink to={'/apply/login'}>Start Applying</NavLink>
 					</ul>
 					<button
 						data-collapse-toggle="navbar-sticky"
@@ -46,11 +46,13 @@ const Navbar = () => {
 					id="navbar-sticky"
 				>
 					<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
-						<li className=" text-gray-700 hover:text-gray-900  hover:underline hover:decoration-4 hover:decoration-indigo-700 hover:underline-offset-4 ">
+						<li className=" text-gray-700 hover:text-gray-900 text font-semibold  hover:underline hover:decoration-4 hover:decoration-indigo-700 hover:underline-offset-4 ">
 							<NavLink
 								to={'/'}
 								className={({ isActive }) =>
-									isActive ? 'text-indigo-700 ' : ''
+									isActive
+										? 'text-indigo-700 underline underline-offset-4 decoration-4 decoration-indigo-700'
+										: ''
 								}
 							>
 								Statistic
@@ -60,7 +62,9 @@ const Navbar = () => {
 							<NavLink
 								to={'./applied'}
 								className={({ isActive }) =>
-									isActive ? 'text-blue-700' : ''
+									isActive
+										? 'text-indigo-700 underline underline-offset-4 decoration-4 decoration-indigo-700'
+										: ''
 								}
 							>
 								Applied Jobs
@@ -70,7 +74,9 @@ const Navbar = () => {
 							<NavLink
 								to={'./blog'}
 								className={({ isActive }) =>
-									isActive ? 'text-blue-700' : ''
+									isActive
+										? 'text-indigo-700 underline underline-offset-4 decoration-4 decoration-indigo-700'
+										: ''
 								}
 							>
 								Blog

@@ -6,6 +6,23 @@ import AppliedJob from '../Appliedjob/AppliedJob';
 const AppliedJobs = () => {
 	const jobs = useLoaderData();
 	const [appliedJobs, setAppliedJobs] = useState();
+	const [displayJobs, setDisplayjobs] = useState([]);
+
+	const hnadleJobFilter = (filterText) => {
+		if (filterText === 'all') {
+			setDisplayjobs(appliedJobs);
+		} else if (filterText === 'Remote') {
+			const remotejobs = appliedJobs.filter(
+				(job) => job.remote_or_onsite === 'Remote',
+			);
+			setDisplayjobs(remotejobs);
+		} else if (filterText === 'Onsite') {
+			const onsiteJobs = appliedJobs.filter(
+				(job) => job.remote_or_onsite === 'Onsite',
+			);
+			setAppliedJobs(onsiteJobs);
+		}
+	};
 
 	useEffect(() => {
 		const savedLSApplicationId = getSavedJobApplication(); // [2,6,4]
@@ -14,6 +31,7 @@ const AppliedJobs = () => {
 				savedLSApplicationId.includes(job.id),
 			);
 			setAppliedJobs(jobsApplied);
+			setDisplayjobs(jobsApplied);
 		}
 	}, [jobs]);
 
@@ -27,15 +45,35 @@ const AppliedJobs = () => {
 
 			<div className="max-w-7xl mx-auto my-32">
 				{/* DropDown */}
-				<div>
+				<div className="flex items-center justify-center">
 					<details className="dropdown mb-32">
-						<summary className="m-1 btn">open or close</summary>
-						<ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+						<summary className="m-1 font-medium rounded text-sm px-4 py-3 text-center  text-white  bg-indigo-600 hover:bg-indigo-500 hover:shadow-lg focus:ring-4 focus:outline-none focus:ring-blue-300 transition-all duration-300 ease-in-out cursor-pointer">
+							Filter Job
+						</summary>
+						<ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-28">
 							<li>
-								<a>Item 1</a>
+								<button
+									onClick={() => hnadleJobFilter('all')}
+									className="hover:bg-indigo-100 hover:text-gray-800"
+								>
+									All
+								</button>
 							</li>
 							<li>
-								<a>Item 2</a>
+								<button
+									onClick={() => hnadleJobFilter('Remote')}
+									className="hover:bg-indigo-100 hover:text-gray-800"
+								>
+									Remote
+								</button>
+							</li>
+							<li>
+								<button
+									onClick={() => hnadleJobFilter('Onsite')}
+									className="hover:bg-indigo-100 hover:text-gray-800"
+								>
+									Onsite
+								</button>
 							</li>
 						</ul>
 					</details>
@@ -43,7 +81,7 @@ const AppliedJobs = () => {
 				{/* Loop */}
 
 				{appliedJobs &&
-					appliedJobs.map((job, index) => (
+					displayJobs.map((job, index) => (
 						<AppliedJob key={index} job={job}></AppliedJob>
 					))}
 			</div>
