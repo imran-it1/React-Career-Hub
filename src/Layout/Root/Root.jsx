@@ -1,11 +1,23 @@
-import { Outlet, useNavigation } from 'react-router-dom';
+import { Outlet, useLocation, useNavigation } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
 import HashLoader from 'react-spinners/HashLoader';
+import { useEffect } from 'react';
 
 const Root = () => {
 	const navigation = useNavigation();
-	console.log(navigation);
+
+	const location = useLocation();
+	useEffect(() => {
+		if (location.pathname === '/') {
+			document.title = `Career-Home`;
+		} else {
+			if (location.state) {
+				return (document.title = location.state);
+			}
+			document.title = `Career ${location.pathname.replace('/', '- ')}`;
+		}
+	}, [location.pathname, location.state]);
 
 	return (
 		<div>
