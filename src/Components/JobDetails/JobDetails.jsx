@@ -1,9 +1,4 @@
-import {
-	NavLink,
-	useLoaderData,
-	useNavigate,
-	useParams,
-} from 'react-router-dom';
+import { NavLink, useLoaderData, useParams } from 'react-router-dom';
 import './Jobdetails.css';
 import { HiOutlineCurrencyDollar } from 'react-icons/hi2';
 import { SlCalender } from 'react-icons/sl';
